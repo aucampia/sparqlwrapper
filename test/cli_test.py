@@ -75,7 +75,7 @@ class SPARQLWrapperCLIParser_Test(SPARQLWrapperCLI_Test_Base):
         self.assertEqual(cm.exception.code, 2)
         self.assertEqual(
             sys.stderr.getvalue().split("\n")[1],
-            "rqw: error: argument -F/--format: invalid choice: 'jjssoonn' (choose from 'json', 'xml', 'turtle', 'n3', 'rdf', 'rdf+xml', 'csv', 'tsv')",
+            "rqw: error: argument -F/--format: invalid choice: 'jjssoonn' (choose from 'json', 'xml', 'turtle', 'n3', 'rdf', 'rdf+xml', 'csv', 'tsv', 'json-ld')",
         )
 
     def testInvalidFile(self):
