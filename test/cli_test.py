@@ -20,7 +20,8 @@ if _top_level_path not in sys.path:
 from SPARQLWrapper.main import main, parse_args
 
 endpoint = "http://ja.dbpedia.org/sparql"
-testfile = os.path.join(os.path.dirname(__file__), 'test.rq')
+testfile = os.path.join(os.path.dirname(__file__), "test.rq")
+
 
 class SPARQLWrapperCLI_Test_Base(unittest.TestCase):
     def setUp(self):

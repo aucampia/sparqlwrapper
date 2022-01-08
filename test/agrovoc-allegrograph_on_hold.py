@@ -26,12 +26,32 @@ try:
 except ImportError:
     from rdflib import ConjunctiveGraph
 
-from SPARQLWrapper import (CSV, GET, JSON, JSONLD, N3, POST, RDF, RDFXML, TSV,
-                           TURTLE, XML, SPARQLWrapper)
+from SPARQLWrapper import (
+    CSV,
+    GET,
+    JSON,
+    JSONLD,
+    N3,
+    POST,
+    RDF,
+    RDFXML,
+    TSV,
+    TURTLE,
+    XML,
+    SPARQLWrapper,
+)
 from SPARQLWrapper.SPARQLExceptions import QueryBadFormed
-from SPARQLWrapper.Wrapper import (_CSV, _RDF_JSONLD, _RDF_N3, _RDF_TURTLE,
-                                   _RDF_XML, _SPARQL_JSON, _SPARQL_XML, _TSV,
-                                   _XML)
+from SPARQLWrapper.Wrapper import (
+    _CSV,
+    _RDF_JSONLD,
+    _RDF_N3,
+    _RDF_TURTLE,
+    _RDF_XML,
+    _SPARQL_JSON,
+    _SPARQL_XML,
+    _TSV,
+    _XML,
+)
 
 _SPARQL_SELECT_ASK_POSSIBLE = (
     _SPARQL_XML + _SPARQL_JSON + _CSV + _TSV + _XML
@@ -401,7 +421,6 @@ class SPARQLWrapperTests(unittest.TestCase):
         assert True in [one in ct for one in _SPARQL_SELECT_ASK_POSSIBLE], ct
         results = result.convert()
         self.assertEqual(type(results), dict)
-
 
     # asking for an unexpected return format for ASK queryType
     def testAskByPOSTinJSONLD(self):
